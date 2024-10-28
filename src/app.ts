@@ -4,6 +4,7 @@ import {serveEmojiFavicon} from "stoker/middlewares";
 import createApp from "@/lib/create-app";
 import configureOpenAPI from "@/lib/config.openapi";
 import indexRoute from "@/routes/index.route";
+import tasks from "@/routes/tasks/tasks.index";
 
 
 
@@ -11,7 +12,8 @@ import indexRoute from "@/routes/index.route";
 const app =  createApp()
 
 const routes =[
-    indexRoute
+    indexRoute,
+    tasks
 
 ];
  configureOpenAPI(app)

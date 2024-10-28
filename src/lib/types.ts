@@ -1,5 +1,5 @@
  import {PinoLogger} from "hono-pino";
- import {OpenAPIHono} from "@hono/zod-openapi";
+ import {OpenAPIHono, RouteConfig, RouteHandler} from "@hono/zod-openapi";
 
  export type AppBindings= {
     Variables:{
@@ -8,3 +8,5 @@
 }
 
 export type AppOpenAPI = OpenAPIHono<AppBindings>
+
+ export type AppRouteHandler<T extends RouteConfig> = RouteHandler<T,AppBindings>
