@@ -13,7 +13,11 @@ const routes =[
     indexRoute,
     tasks
 
-];
+] as const;
+
+export type  AppType = typeof routes[number];
+
+
  configureOpenAPI(app)
 routes.forEach((route)=>{
     app.route("/", route)

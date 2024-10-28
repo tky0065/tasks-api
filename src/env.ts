@@ -6,7 +6,7 @@ expand(config())
 const EnvSchema = z.object({
     NODE_ENV: z.string().default("developpement"),
 
-    LOG_LEVEL:z.enum(["fatal" , "error" , "warn" , "info" ,"debug" , "trace"]),
+    LOG_LEVEL:z.enum(["fatal" , "error" , "warn" , "info" ,"debug" , "trace", "silent"]),
     DATABASE_URL: z.string().url(),
     DATABASE_AUTH_TOKEN: z.string().optional(),
 }).refine((input)=>{
