@@ -1,0 +1,28 @@
+{
+  "name": "tasks-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint --fix"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^1.0.0-beta.2",
+    "@hono/node-server": "^1.13.3",
+    "@hono/zod-openapi": "^0.16.4",
+    "@scalar/hono-api-reference": "^0.5.156",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.6",
+    "hono": "^4.6.7",
+    "hono-pino": "^0.4.0",
+    "pino": "^9.5.0",
+    "pino-pretty": "^11.3.0",
+    "stoker": "^1.2.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1"
+  }
+}
